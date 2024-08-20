@@ -2,16 +2,16 @@
 
 const circleContainer = document.querySelector('.numbersContainer');
 
-let coins = 0;        
-let randomNumber;    
-let timeLeft = 60;    
-let timerInterval;   
+let coins = 0;
+let randomNumber;
+let timeLeft = 60;
+let timerInterval;
 
 
 
 function startGame() {
     const randomNumberBox = document.getElementById('targetNumber');
-    randomNumberBox.textContent = (randomNumber = Math.floor(Math.random() * 20) + 1);
+    randomNumberBox.textContent = ` Click Number (${(randomNumber = Math.floor(Math.random() * 20) + 1)})`;
     circlesNumber();
     timerHeading();
 }
@@ -20,7 +20,7 @@ startGame();
 function circlesNumber() {
     const circles = document.querySelectorAll('.circle');
     const randomCircle = Math.floor(Math.random() * circles.length);
-    console.log(circles.length,"Circle length")
+    console.log(circles.length, "Circle length");
 
     circles.forEach((circle, index) => {
         let number;
@@ -33,16 +33,14 @@ function circlesNumber() {
     });
 }
 
-
-
 function timerHeading() {
     const timerSection = document.getElementById('timer');
-    clearInterval(timerInterval); 
+    clearInterval(timerInterval);
     timePending = 60;
     timerSection.textContent = timeLeft;
 
     timerInterval = setInterval(() => {
-        timerSection.textContent = --timePending;
+        timerSection.textContent = `timer ${--timePending}`;
 
         if (timePending <= 0) {
             clearInterval(timerInterval);
@@ -69,7 +67,7 @@ circleContainer.addEventListener('click', (e) => {
             coinsBox.textContent = ++coins;
             startGame();
         } else {
-            alert("Your Game is over.");
+            alert(`Your Game is over (${coins}) coins you win`);
             restartGame();
         }
     }
