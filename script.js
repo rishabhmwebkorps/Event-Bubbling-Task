@@ -8,7 +8,6 @@ let timeLeft = 60;
 let timerInterval;   
 
 
-startGame();
 
 function startGame() {
     const randomNumberBox = document.getElementById('targetNumber');
@@ -16,15 +15,16 @@ function startGame() {
     circlesNumber();
     timerHeading();
 }
-
+startGame();
 
 function circlesNumber() {
     const circles = document.querySelectorAll('.circle');
     const randomCircle = Math.floor(Math.random() * circles.length);
+    console.log(circles.length,"Circle length")
 
     circles.forEach((circle, index) => {
         let number;
-        if (index === randomCircle) {
+        if (index == randomCircle) {
             number = randomNumber;
         } else {
             number = Math.floor(Math.random() * 10) + 1;
@@ -32,6 +32,8 @@ function circlesNumber() {
         circle.textContent = number;
     });
 }
+console.log(number);
+console.log(timerInterval,'timerIntervel');
 
 
 function timerHeading() {
@@ -73,3 +75,5 @@ circleContainer.addEventListener('click', (e) => {
         }
     }
 });
+
+
