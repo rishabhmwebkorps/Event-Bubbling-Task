@@ -1,7 +1,5 @@
-/* General styling for the entire page */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,23 +7,23 @@ body {
     margin: 0;
 }
 
-.game-container {
-    width: 300px;
+.container {
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Styling for the information boxes at the top (random number, timer, coins) */
-.info {
+.heading {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    background-color: black;
+    border-radius: 6px;
 }
 
-.box {
-    width: 70px;
+.headingBox {
+    width: 100px;
     height: 50px;
     background-color: #e0e0e0;
     border-radius: 5px;
@@ -36,17 +34,16 @@ body {
     font-weight: bold;
 }
 
-/* Styling for the circle container */
-.circle-container {
+.numbersContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    width: 100%;
+    gap: 18px;
 }
 
-/* Styling for each circle */
 .circle {
-    width: 60px;
-    height: 60px;
+    width: 280px;
+    height: 280px;
     background-color: #007bff;
     color: #ffffff;
     border-radius: 50%;
@@ -58,9 +55,4 @@ body {
     margin-bottom: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-/* Circle hover effect */
-.circle:hover {
-    background-color: #0056b3;
 }
