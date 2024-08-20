@@ -32,8 +32,7 @@ function circlesNumber() {
         circle.textContent = number;
     });
 }
-console.log(number);
-console.log(timerInterval,'timerIntervel');
+
 
 
 function timerHeading() {
