@@ -1,6 +1,7 @@
 body {
     display: flex;
     justify-content: center;
+    font-family: sans-serif;
     align-items: center;
     height: 100vh;
     margin: 0;
@@ -87,6 +88,7 @@ body {
     color: white;
     font-size: 28px;
     font-weight: bold;
+    padding: 10px;
 }
 #targetNumber{
     color: white;
