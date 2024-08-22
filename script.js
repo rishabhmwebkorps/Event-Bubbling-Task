@@ -50,8 +50,8 @@ function timerHeading() {
                 <p> <span>Time is over :${coins}</span ></p>`
             modals.appendChild(card);
             modals.style.display = 'block'
-            restartGame();
         }
+        
     }, 1000);
 }
 function restartGame() {
@@ -63,6 +63,7 @@ function restartGame() {
 }
 function onCancel() {
     document.getElementById('modal').style.display = 'none';
+    restartGame()
 }
 document.querySelector('.numbersContainer').addEventListener('click', (e) => {
     const coinsBox = document.getElementById('coins');
@@ -81,7 +82,7 @@ document.querySelector('.numbersContainer').addEventListener('click', (e) => {
                 <p> <span>Game is over :${coins} coins</span ></p>`
             modals.appendChild(card);
             modals.style.display = 'block'
-            restartGame();
+            
         }
     }
 });
