@@ -11,7 +11,7 @@ function startGame() {
 
 function reset (){
     const randomNumberBox = document.getElementById('targetNumber');
-    randomNumberBox.innerHTML = `Click Number (${(randomNumber = Math.floor(Math.random() * 20) + 1)})`;
+    randomNumberBox.innerHTML = `Click Number [${(randomNumber = Math.floor(Math.random() * 20) + 1)}]`;
     circlesNumber();
 }
 
