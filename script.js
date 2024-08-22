@@ -4,14 +4,14 @@ let timerInterval;
 
 function startGame() {
     const randomNumberBox = document.getElementById('targetNumber');
-    randomNumberBox.innerHTML = `Click Number (${(randomNumber = Math.floor(Math.random() * 20) + 1)})`;
+    randomNumberBox.innerHTML = `${(randomNumber = Math.floor(Math.random() * 30) + 1)}`;
     circlesNumber();
     timerHeading();
 }
 
 function reset (){
     const randomNumberBox = document.getElementById('targetNumber');
-    randomNumberBox.innerHTML = `Click Number [${(randomNumber = Math.floor(Math.random() * 20) + 1)}]`;
+    randomNumberBox.innerHTML = ` ${(randomNumber = Math.floor(Math.random() * 30) + 1)}`;
     circlesNumber();
 }
 
@@ -21,12 +21,11 @@ function circlesNumber() {
     const randomCircle = Math.floor(Math.random() * circles.length);
 
     circles.forEach((circle, index) => {
-
         let number;
         if (index == randomCircle) {
             number = randomNumber;
         } else {
-            number = Math.floor(Math.random() * 20) + 1;
+            number = Math.floor(Math.random() * 30) + 1;
         }
         circle.innerHTML = number;
     });
@@ -37,17 +36,17 @@ function timerHeading() {
     const modals = document.getElementById('modal');
     clearInterval(timerInterval);
     let timeLeft = 120;
-    timerSection.innerHTML = timeLeft;
+    timerSection.innerHTML = `Timer Start ${timeLeft}`;
 
     timerInterval = setInterval(() => {
-        timerSection.innerHTML = `Timer ${--timeLeft}`;
+        timerSection.innerHTML = `Timer - ${--timeLeft}`;
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
             const card = document.createElement('div');
             card.className = 'cardDetails';
             card.innerHTML = `
                  <button onclick=onCancel()>Cancel</button>
-                <p> <span>Time is over :${coins}</span ></p>`
+                <p> <span>Time is over : ${coins} Coins !</span ></p>`
             modals.appendChild(card);
             modals.style.display = 'block'
         }
@@ -58,7 +57,7 @@ function restartGame() {
     const coinsBox = document.getElementById('coins');
     clearInterval(timerInterval);
     coins = 0
-    coinsBox.innerHTML = coins;
+    coinsBox.innerHTML = `${coins} Coins`;
     startGame();
 }
 function onCancel() {
@@ -79,7 +78,7 @@ document.querySelector('.numbersContainer').addEventListener('click', (e) => {
             card.className = 'cardDetails';
             card.innerHTML = `
                 <button onclick=onCancel()>Restart</button>
-                <p> <span>Game is over :${coins} coins</span ></p>`
+                <p> <span>Game is over : ${coins} coins</span ></p>`
             modals.appendChild(card);
             modals.style.display = 'block'
             

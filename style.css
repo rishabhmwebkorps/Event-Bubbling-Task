@@ -4,12 +4,14 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
 }
 
 .container {
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
+    width: 70%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -22,7 +24,7 @@ body {
 }
 
 .headingBox {
-    width: 240px;
+    width: 270px;
     height: 100px;
     border-radius: 5px;
     display: flex;
@@ -38,20 +40,21 @@ body {
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
-    gap: 58px;
+    gap: 38px;
+    justify-content: center;
 }
 
 .circle {
-    width: 250px;
-    height: 250px;
-    background-color: #007bff;
-    color: #ffffff;
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    color: white;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 54px;
-    font-weight: bold;
+    font-size: 32px;
+    font-weight: 900;
     margin-bottom: 10px;
     cursor: pointer;
 }
@@ -60,29 +63,43 @@ body {
     background-color: black;
     border: 2px solid white;
     width: 30%;
-    height: 10%;
+    height: 15%;
     color: white;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
     z-index: 10;
     position: absolute;
-    top: 30%;
-    left: 30%;
+    top: 34%;
+    left: 34%;
     font-size: 25px;
 }
 
 .cardDetails button{
     padding: 8px;
-    font-size: 15px;
+    font-size: 17px;
     border: none;
+    margin-top: 20px;
+    border-radius: 4px;
+    box-shadow: #3D4E81;
 }
 #timer{
     color: white;
+    font-size: 28px;
+    font-weight: bold;
 }
 #targetNumber{
     color: white;
+    font-size: 29px;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 10px;
+
 }
 #coins{
     color: white;
+    font-size: 28px;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 10px;
 }
