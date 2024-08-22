@@ -30,11 +30,11 @@ function timerHeading() {
     const timerSection = document.getElementById('timer');
     const modals = document.getElementById('modal');
     clearInterval(timerInterval);
-    let timeLeft = 60;
+    let timeLeft = 120;
     timerSection.innerHTML = timeLeft;
 
     timerInterval = setInterval(() => {
-        timerSection.innerHTML = `timer ${--timeLeft}`;
+        timerSection.innerHTML = `Timer ${--timeLeft}`;
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
             const card = document.createElement('div');
