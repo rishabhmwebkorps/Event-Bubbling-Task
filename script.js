@@ -9,6 +9,12 @@ function startGame() {
     timerHeading();
 }
 
+function reset (){
+    const randomNumberBox = document.getElementById('targetNumber');
+    randomNumberBox.innerHTML = `Click Number (${(randomNumber = Math.floor(Math.random() * 20) + 1)})`;
+    circlesNumber();
+}
+
 startGame();
 function circlesNumber() {
     const circles = document.querySelectorAll('.circle');
@@ -65,8 +71,8 @@ document.querySelector('.numbersContainer').addEventListener('click', (e) => {
         const selectNumber = parseInt(e.target.innerHTML);
 
         if (selectNumber === randomNumber) {
-            coinsBox.innerHTML = ++coins;
-            startGame();
+            coinsBox.innerHTML = `Coins ${++coins}`;
+            reset();
         } else {
             const card = document.createElement('div');
             card.className = 'cardDetails';

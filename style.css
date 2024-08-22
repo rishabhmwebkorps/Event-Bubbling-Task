@@ -22,9 +22,8 @@ body {
 }
 
 .headingBox {
-    width: 200px;
+    width: 240px;
     height: 100px;
-    background-color: #e0e0e0;
     border-radius: 5px;
     display: flex;
     text-align: center;
@@ -77,4 +76,13 @@ body {
     padding: 8px;
     font-size: 15px;
     border: none;
+}
+#timer{
+    color: white;
+}
+#targetNumber{
+    color: white;
+}
+#coins{
+    color: white;
 }
