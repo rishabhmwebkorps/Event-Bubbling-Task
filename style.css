@@ -10,7 +10,7 @@ body {
 
 .container {
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #D8D8D8;
     border-radius: 10px;
     width: 70%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -58,6 +58,10 @@ body {
     font-weight: 900;
     margin-bottom: 10px;
     cursor: pointer;
+}
+.circle:hover{
+    transform: scale(110%);
+    background-image: linear-gradient(-225deg, #4abcce 0%, #30a0f7 48%, #4037e2 100%);
 }
 
 .cardDetails{

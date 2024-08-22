@@ -80,6 +80,7 @@ document.querySelector('.numbersContainer').addEventListener('click', (e) => {
                 <button onclick=onCancel()>Restart</button>
                 <p> <span>Game is over : ${coins} coins</span ></p>`
             modals.appendChild(card);
+            console.log(coins,'deleted items are their for coins section')
             modals.style.display = 'block'
             
         }
