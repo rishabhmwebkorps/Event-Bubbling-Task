@@ -38,12 +38,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    gap: 18px;
+    align-items: center;
+    gap: 58px;
 }
 
 .circle {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
     background-color: #007bff;
     color: #ffffff;
     border-radius: 50%;
