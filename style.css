@@ -10,7 +10,7 @@ body {
 
 .container {
     padding: 20px;
-    background-color: #D8D8D8;
+    background-color: #ffffff;
     border-radius: 10px;
     width: 70%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -59,17 +59,19 @@ body {
     margin-bottom: 10px;
     cursor: pointer;
 }
-.circle:hover{
+
+.circle:hover {
     transform: scale(110%);
     background-image: linear-gradient(-225deg, #4abcce 0%, #30a0f7 48%, #4037e2 100%);
 }
 
-.cardDetails{
-    background-color: black;
-    border: 2px solid white;
+.cardDetails {
+    background-image: linear-gradient(-225deg, #4abcce 0%, #30a0f7 48%, #4037e2 100%);
+    /* border: 2px solid white; */
     width: 30%;
-    height: 15%;
-    color: white;
+    box-shadow: #3D4E81;
+    height: 25%;
+    color: black;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
@@ -78,31 +80,71 @@ body {
     top: 34%;
     left: 34%;
     font-size: 25px;
+    box-shadow: #12192c;
 }
 
-.cardDetails button{
+.close{
+   display: flex;
+   justify-content: right;
+   width: 7%;
+}
+
+.cardDetails button {
     padding: 8px;
     font-size: 17px;
     border: none;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 4px;
+    background-color: #ffffff;
     box-shadow: #3D4E81;
 }
-#timer{
+.carDe{
+    z-index:10;
+    position:absolute;
+    top:60px;
+    left:256px;
+    width:1319px;
+    height:80%;
+    background-image: linear-gradient(-225deg, #4abcce 0%, #30a0f7 48%, #4037e2 100%);
+   
+    box-shadow: #3D4E81;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    box-shadow: #12192c;
+}
+.carDe button{
+    padding: 20px;
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+}
+.carDe .puzzle{
+    width: 25%;
+}
+
+#timer {
     color: white;
     font-size: 28px;
     font-weight: bold;
     padding: 10px;
 }
-#targetNumber{
+
+#targetNumber {
     color: white;
-    font-size: 29px;
+    font-size: 40px;
     font-weight: bold;
     border: 1px solid white;
     padding: 10px;
 
 }
-#coins{
+.puzzle{
+    width: 10%;
+}
+
+#coins {
     color: white;
     font-size: 28px;
     font-weight: bold;
